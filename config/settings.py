@@ -5,7 +5,7 @@ CHECK_INTERVAL = 30   # seconds (for testing)
 
 
 WORKLOADS = {
-    "ml_training": "ml-training",
-    "backup_job": "backup-job",
-    "analytics_job": "analytics-job"
+    "critical": ["analytics-job"],     # always run
+    "medium": ["backup-job"],          # optional
+    "heavy": ["ml-training"]           # stop first
 }
