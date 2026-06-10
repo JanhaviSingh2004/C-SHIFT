@@ -231,7 +231,7 @@
     });
 
     async function loadData() {
-      const res = await fetch("http://127.0.0.1:5000/status");
+      const res = await fetch("https://c-shift.onrender.com/status");
       const data = await res.json();
 
       document.getElementById("carbon").innerText = data.carbon_intensity + " gCO2";
